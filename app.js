@@ -33,6 +33,7 @@
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   const safeUrl = (u) => {
+    if (typeof u !== "string" || !u.trim()) return null;
     try {
       const url = new URL(u, location.href);
       return /^https?:$/.test(url.protocol) ? url.href : null;
