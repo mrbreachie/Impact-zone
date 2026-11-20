@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impact Zone</title>
+  <meta name="description" content="A collection of small, sharp tools.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 3 L29 28 H3 Z' fill='%23e4572e'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 3 L29 28 H3 Z"/></svg>
+      </div>
+      <h1 id="site-title">Impact Zone</h1>
+      <p id="site-tagline" class="tagline"></p>
+      <nav id="site-links" class="links"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <label class="search">
+        <span class="visually-hidden">Search tools</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input id="search" type="search" placeholder="Search tools…" autocomplete="off">
+      </label>
+      <select id="sort" aria-label="Sort by">
+        <option value="updated">Recently updated</option>
+        <option value="stars">Most stars</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </div>
+    <div id="filters" class="filters" role="group" aria-label="Filter by language"></div>
+
+    <p id="status" class="status" role="status">Loading tools…</p>
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="wrap footer">
+    <span id="count"></span>
+    <span>Built with plain HTML · hosted on GitHub Pages</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
