@@ -11,7 +11,7 @@ window.SITE_CONFIG = {
 
   // Repos to leave off the page (e.g. this landing page itself).
   hide: [
-    "Impack-zone",
+    "Impact-zone",
   ],
 
   includeForks: false,
